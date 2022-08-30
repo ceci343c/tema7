@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Øvelse 1</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <img id="snaps" src="snaps.jpeg" alt="snaps" class="" width="400px" />
+      <img id="oel" src="oel.jpeg" alt="oel" class="" width="400px" />
+      <img id="cola" src="cola.jpeg" alt="cola" class="" width="400px" />
+      <img id="fanta" src="fanta.png" alt="fanta" class="" width="400px" />
+    </div>
+
+    <script>
+      const snaps = document.querySelector("#snaps");
+      snaps.addEventListener("click", tjek);
+
+      document.querySelector("#fanta").addEventListener("click", tjek);
+      document.querySelector("#cola").addEventListener("click", tjek);
+      document.querySelector("#oel").addEventListener("click", tjek);
+
+      function tjek() {
+        console.log(this.alt); 
+        if(this.alt == "oel" || this.alt == "snaps") {
+            console.log("Indeholder alkohol");
+        } else {
+            console.log("Alkoholfri");
+        }
+    }
+
+    </script>
+  </body>
+</html>
