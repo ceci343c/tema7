@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: rgb(252, 229, 195);
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+main {
+  padding-bottom: 5rem;
+}
+
+main,
+nav {
+  max-width: 90%;
+  margin: 0 auto;
+}
+button {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  background: rgb(114, 99, 99);
+  color: white;
+  border: 5px solid rgb(114, 99, 99);
+  border-radius: 20px;
+}
+
+button:hover {
+  background-color: rgb(74, 64, 64);
+}
+
+footer {
+  text-align: center;
+}
+
+.popup {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  display: none;
+  overflow: scroll;
+}
+.popup-content {
+  width: 90vw;
+  height: auto;
+  background: #fff;
+  color: #000;
+  text-align: left;
+  padding: 20px;
+  position: absolute;
+  left: 5vw;
+  top: 50px;
+}
+#menu-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+#menu-container h1 {
+  grid-column: 1/4;
+}
+
+#overskrift {
+  padding-bottom: 2rem;
+}
+.overskrifter {
+  border-bottom: 2px solid #000;
+  margin: 10px 0;
+}
+
+article {
+  background: #ffffff;
+  color: rgb(4, 4, 4);
+}
+article h2,
+article p {
+  padding: 2rem 0;
+}
+
+.single-titel {
+  padding: 2rem 0;
+}
+
+.popup-content > details {
+  padding: 4rem 0;
+  cursor: pointer;
+}
+
+.popup-content > details > p {
+  padding: 2rem 0;
+}
+
+
+/* MENU */
+.menu {
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+
+nav {
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.6s;
+}
+.show {
+  max-height: 500px;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+/* Rotate last bar */
+.change .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+/* Media queries */
+@media screen and (min-width: 667px) {
+
+  nav {
+    max-height: 200px;
+  }
+}
+
+@media screen and (min-width: 667px) and (max-width: 1000px) {
+  main,
+  nav {
+    margin: 0 auto;
+  }
+  button {
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    padding: 1rem 2rem;
+  }
+
+  #menu-container {
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid black;
+    border-radius: 6px;
+  }
+  .popup-content {
+    width: 80vw;
+    height: auto;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    left: 10vw;
+    top: 100px;
+  }
+}
+@media screen and (min-width: 1001px) {
+  main,
+  nav,
+  footer section {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  button {
+    font-size: 1.5rem;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    padding: 1rem 2rem;
+  }
+  #menu-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .popup-content {
+    width: 50vw;
+    height: auto;
+    background: #fff;
+    color: #000;
+    text-align: left;
+    padding: 20px;
+    position: absolute;
+    left: 25vw;
+    top: 100px;
+  }
+}
